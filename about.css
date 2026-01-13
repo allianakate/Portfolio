@@ -67,7 +67,7 @@ header {
 .nav-bar ul li a {
     display: block;
     color: var(--bg-color);
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     padding: 10px 25px;
     border-radius: 50px;
@@ -604,4 +604,5 @@ footer {
     .technical-skills {
         grid-template-columns: 1fr;
     }
+
 }
