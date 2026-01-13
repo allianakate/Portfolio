@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design | Codehal</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="../CSS/contact.css">
+</head>
+
+<body>
+<header>
+    <div class="logo">
+        <a href="index.htm">
+            <img src="../ASSETS/ojt/logo.png">
+        </a>
+    </div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <nav class="nav-bar">
+        <ul>
+            <li>
+                <a href="index.htm">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="services.html">Internship</a>
+            </li>
+            <li>
+                <a href="portfolio.html">Sample Works</a>
+            </li>
+            <li>
+                <a href="" class="active">Contact</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section class="contact" id="contact"> 
+    <div class="contact-content">
+        <h2>CONTACT<span> ME</span></h2>
+        <div class="contact-info">
+            <div class="contact-details">
+                <table>
+                    <tr>
+                        <td><i class='bx bxs-phone-call'></i></td>
+                        <td>09093090241</td>
+                    </tr>
+                    <tr>
+                        <td><i class='bx bxs-envelope' ></i></td>
+                        <td>sandovalalliana@gmail.com</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="social-media">
+                <a href="https://web.facebook.com/AllianaSandoval"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/its.liiaaaa_/"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="https://github.com/itsalli"><i class='bx bxl-github' ></i></a> 
+                <a href="https://www.linkedin.com/in/alliana-kate-sandoval-13a2143a1/"><i class='bx bxl-linkedin-square' ></i></a> 
+            </div>
+        </div>
+        <form action="#" method="post">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <p>Copyright @ by Alliana Kate Sandoval || All rights reserved 2025</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    hamburger = document.querySelector(".hamburger");
+    hamburger.onclick = function()  {
+        navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+    }
+</script>
+</body>
+</html>

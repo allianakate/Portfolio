@@ -1,0 +1,242 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+--bg-color: #FFE5B6;
+--text-color: #333;
+--main-color: #432818;
+--white-color: #fdfdfd;
+--shadow-color: rgba(0, 0, 0, .2);
+}
+body{
+background: var(--bg-color);
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999; 
+}
+
+.logo{
+    width: 200px;
+    height: auto; 
+}
+.hamburger{
+display: none;
+}
+.nav-bar ul{
+display: flex;
+list-style-type: none;
+}
+.nav-bar ul li a{
+display: block;
+color: var(--bg-color);
+font-size: 20px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+padding: 10px 25px;
+border-radius: 50px;
+transition: 0.5 ease;
+margin: 0 5px;
+}
+.nav-bar ul li a:hover{
+color: #432818;
+background: #FFE5B6;
+}
+.nav-bar ul li a.active{
+color: #432818;
+background: #FFE5B6;
+}
+section{
+    min-height: 90vh;
+    padding: 10rem 7% 2rem;
+}
+span{
+    color: var(--main-color);
+    font-family: 'playfair display';
+}
+.contact-content {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-content h2 {
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: #AB8B46;
+    font-family: 'playfair display';
+}
+
+.contact-content .contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contact-content .contact-details {
+    margin-right: 50px;
+}
+
+.contact-content .contact-details table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-content .contact-details table tr td {
+    padding: 10px 20px;
+    font-size: 30px;
+    color: #432818;
+    font-weight: 400;
+    text-align: left;
+}
+.contact-content .contact-details table tr td i{
+    font-size: 40px;
+}
+
+.contact-content .social-media a {
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    box-shadow: 0 .2rem .5rem var(--shadow-color);
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 2.5rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.contact-content .social-media a i {
+    color: var(--main-color);
+    font-size: 40px;
+}
+
+.contact-content .social-media a:hover {
+    background: var(--main-color);
+   
+}
+.contact-content .social-media a:hover i{
+    color: var(--white-color);
+    transition: 1.0s ease;
+}
+
+.contact-content form input,
+.contact-content form textarea {
+    width: calc(100% - 40px); /* Adjust the width of input fields and textarea */
+    /* Subtract 40px to leave space for padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 3px solid var(--main-color);
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.contact-content form button {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contact-content form button:hover {
+    background-color: transparent;
+    border: 5px solid var(--main-color);
+    color: var(--main-color);
+    transition: 1.0s ease;
+}
+
+footer {
+    background:#432818;
+    color: #AB8B46;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-content {
+    text-align: center;
+}
+@media only screen and (max-width: 1320px){
+header{
+    padding: 0 50px;
+}
+}
+@media only screen and (max-width: 1100px){
+header{
+    padding: 0 30px;
+}
+}
+@media only screen and (max-width: 900px){
+.hamburger{
+    display: block;
+    cursor: pointer;
+}
+.hamburger .line{
+    width: 30px;
+    height: 3px;
+    background: #FFE5B6;
+    margin: 6px 0;
+}
+.nav-bar{
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #432818b6;
+    transition: 0.5s ease;
+    overflow: hidden;
+}
+.nav-bar.active{
+    height: 450px;
+}
+.nav-bar ul{
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+.nav-bar.active ul{
+    opacity: 1;
+}
+.nav-bar ul li a{
+    margin-bottom: 12px;
+}
+}
+
+
