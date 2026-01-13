@@ -43,26 +43,26 @@ header {
 display: none;
 }
 .nav-bar ul{
-display: flex;
-list-style-type: none;
+    display: flex;
+    list-style-type: none;
 }
 .nav-bar ul li a{
-display: block;
-color: var(--bg-color);
-font-size: 20px;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-padding: 10px 25px;
-border-radius: 50px;
-transition: 0.5 ease;
-margin: 0 5px;
+    display: block;
+    color: var(--bg-color);
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.5 ease;
+    margin: 0 5px;
 }
 .nav-bar ul li a:hover{
-color: #432818;
-background: #FFE5B6;
+    color: #432818;
+    background: #FFE5B6;
 }
 .nav-bar ul li a.active{
-color: #432818;
-background: #FFE5B6;
+    color: #432818;
+    background: #FFE5B6;
 }
 section{
     min-height: 90vh;
@@ -238,5 +238,6 @@ header{
     margin-bottom: 12px;
 }
 }
+
 
 
