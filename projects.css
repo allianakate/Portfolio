@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #FFE5B6;
+    --text-color: #333;
+    --main-color: #432818;
+    --white-color: #fdfdfd;
+    --shadow-color: rgba(0, 0, 0, .2);
+    --accent-color: #AB8B46;
+}
+
+body {
+    background: var(--bg-color);
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999; 
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: var(--bg-color);
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.5s ease;
+    margin: 0 2px;
+}
+
+.nav-bar ul li a:hover,
+.nav-bar ul li a.active {
+    color: #432818;
+    background: #FFE5B6;
+}
+
+.nav-bar ul li a.main {
+    border: 4px solid var(--accent-color);
+    color: #FFE5B6;
+}
+
+.nav-bar ul li a.main:hover {
+    color: #432818;
+}
+
+section {
+    min-height: 90vh;
+    padding: 10rem 7% 2rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.heading {
+    font-size: 4.5rem;
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 3rem;
+}
+
+/* Task Description */
+.task-description {
+    max-width: 1000px;
+    margin: 0 auto 4rem;
+    background: var(--white-color);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 .5rem 1rem var(--shadow-color);
+    border-left: 5px solid var(--accent-color);
+}
+
+.task-description p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.portfolio {
+    padding-bottom: 8rem;
+}
+
+.portfolio h2 {
+    margin-bottom: 3rem;
+}
+
+.portfolio .portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.portfolio-container .portfolio-box {
+    position: relative;
+    display: flex;
+    border-radius: 1.5rem;
+    box-shadow: 0 .5rem 1rem var(--shadow-color);
+    overflow: hidden;
+    background: var(--white-color);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem var(--shadow-color);
+}
+
+.portfolio-box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .3), var(--main-color));
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 0 3rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+    opacity: 0.95;
+}
+
+.portfolio-layer h4 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--white-color);
+}
+
+.portfolio-layer p {
+    font-size: 1.5rem;
+    margin: 0.5rem 0 1rem;
+    line-height: 1.6;
+}
+
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--white-color);
+    border-radius: 50%;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.portfolio-layer a:hover {
+    background: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.portfolio-layer a i {
+    font-size: 2.5rem;
+    color: var(--main-color);
+}
+
+.portfolio-layer a:hover i {
+    color: var(--white-color);
+}
+
+footer {
+    background: var(--main-color);
+    color: var(--accent-color);
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px;
+    }
+    
+    .portfolio-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        padding: 0 30px;
+    }
+    
+    .heading {
+        font-size: 3.5rem;
+    }
+    
+    .task-description {
+        padding: 2rem;
+    }
+    
+    .task-description p {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: #FFE5B6;
+        margin: 6px 0;
+    }
+    
+    .nav-bar {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #432818b6;
+        transition: 0.5s ease;
+        overflow: hidden;
+    }
+    
+    .nav-bar.active {
+        height: 550px;
+    }
+    
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s ease;
+        opacity: 0;
+    }
+    
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+    
+    .nav-bar ul li a {
+        margin-bottom: 12px;
+    }
+    
+    .heading {
+        font-size: 3rem;
+    }
+    
+    .task-description {
+        padding: 1.5rem;
+    }
+    
+    .task-description p {
+        font-size: 1.3rem;
+    }
+    
+    .portfolio-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .portfolio-layer h4 {
+        font-size: 2rem;
+    }
+    
+    .portfolio-layer p {
+        font-size: 1.3rem;
+    }
+    
+    .portfolio-layer a {
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    .portfolio-layer a i {
+        font-size: 2rem;
+    }
+}
